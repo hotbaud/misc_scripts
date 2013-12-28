@@ -26,7 +26,7 @@ if [ -w $i ] ; then
 else
 #it's read only.  Make it writable while we alter it.
     chmod +w $i
-    cp $i temp
+    cp $i mstrip_temp
     tr -d '\r' < $i > mstrip_temp
     changed='yes'
 fi
